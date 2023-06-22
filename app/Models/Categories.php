@@ -13,16 +13,17 @@ class Categories extends Model
 
 
 	public $timestamps = false;
- 
-	 
-	
-	public static function getCategoryInfo($id) 
-    { 
+
+
+
+	public static function getCategoryInfo($id)
+    {
+        var_dump($id);
 		return Categories::find($id);
 	}
 
-	public static function countCategoryListings($id) 
-    { 
+	public static function countCategoryListings($id)
+    {
 		return Listings::where(['cat_id' => $id,'status' => '1'])->count();
 	}
 }
