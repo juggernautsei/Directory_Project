@@ -18,7 +18,7 @@ class Categories extends Model
 
 	public static function getCategoryInfo($id)
     {
-        var_dump($id);
+        file_put_contents('/var/www/laravelapp/id.txt', $id);
 		return Categories::find($id);
 	}
 
